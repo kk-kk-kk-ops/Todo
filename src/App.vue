@@ -1,5 +1,6 @@
 <script setup>
-  // 20251126_角井　編集したよ
+  // 20251126_角井　編集したよー
+  //GitHubで修正
 </script>
 
 <template>
