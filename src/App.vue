@@ -1,20 +1,39 @@
 <script setup>
-<<<<<<< HEAD
-// 20251126_角井　編集したよ
-//VScodeで修正したよ
-=======
-  // 20251126_角井　編集したよー
-  //GitHubで修正
->>>>>>> af346796e3b4bcee792bd6a98481680d44a1ba84
+const Todos = [
+  'buy milk',
+  'buy pan',
+  'buy ukiwa'
+]
+function addTodo() {
+  alert('GO')
+}
+
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
+  <div class="container">
+    <h1>Todos</h1>
+    <ul>
+      <li v-for="todo in Todos">{{ todo }}</li>
 
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+    </ul>
+    <form @submit.prevent="addTodo">
+      <input type="text">
+      <button>Add</button>
+    </form>
+  </div>
+
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 20px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+}
+</style>
